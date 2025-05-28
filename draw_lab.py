@@ -1,9 +1,9 @@
 import pygame.display
-from create_lab import result, size 
+from create_lab import result, size
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((size*25, size*25))
+screen = pygame.display.set_mode((size * 25, size * 25))
 done = True
 while done:
     for event in pygame.event.get():

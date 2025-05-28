@@ -1,11 +1,11 @@
 import pygame.display
 import pygame.time
 from answer import right_way
-from create_lab import result, size 
+from create_lab import result, size
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode(((size+2)*25, size*25+60))
+screen = pygame.display.set_mode(((size + 2) * 25, size * 25 + 60))
 done = True
 
 font = pygame.font.SysFont('couriernew', 20)
@@ -19,9 +19,9 @@ while done:
             done = False
         keys = pygame.key.get_pressed()
         if keys[pygame.K_RETURN]:
-            for xy in right_way[-1::-1]:
-                x = xy[1]*21+21
-                y = xy[0]*21+61
+            for position in right_way[-1::-1]:
+                x = position[1] * 21 + 21
+                y = position[0] * 21 + 61
                 pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(x, y, 19, 19))
                 pygame.display.update()
                 clock.tick(20)
